@@ -11,20 +11,16 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Disabled;
 
-
-
 /**
  * @author alumno
  *
  */
 public class ReusablePoolTest {
 
-	
 	@BeforeAll
-	public static void setUp(){
+	public static void setUp() {
 	}
 
-	
 	@AfterAll
 	public static void tearDown() throws Exception {
 	}
@@ -32,32 +28,36 @@ public class ReusablePoolTest {
 	/**
 	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#getInstance()}.
 	 */
-        @Test
-        @DisplayName("testGetInstance")
-        @Disabled("Not implemented yet")
+	@Test
+	@DisplayName("testGetInstance")
+	
 	public void testGetInstance() {
-		
+		ReusablePool pool1 = ReusablePool.getInstance();
+		ReusablePool pool2 = ReusablePool.getInstance();
+		assertTrue(pool1 == pool2, "getInstance should return same instance");
+
 	}
 
 	/**
 	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#acquireReusable()}.
 	 */
 	@Test
-        @DisplayName("testAcquireReusable")
-        @Disabled("Not implemented yet")
+	@DisplayName("testAcquireReusable")
+	@Disabled("Not implemented yet")
 
 	public void testAcquireReusable() {
-		
+
 	}
 
 	/**
-	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
+	 * Test method for
+	 * {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
 	 */
 	@Test
-        @DisplayName("testReleaseReusable")
-        @Disabled("Not implemented yet")
+	@DisplayName("testReleaseReusable")
+	@Disabled("Not implemented yet")
 	public void testReleaseReusable() {
-		
+
 	}
 
 }
