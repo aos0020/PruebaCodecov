@@ -33,6 +33,11 @@ public class ReusablePoolTest {
 	
 	public void testGetInstance() {
 
+		ReusablePool pool1 = ReusablePool.getInstance();
+		ReusablePool pool2 = ReusablePool.getInstance();
+		assertTrue(pool1 == pool2, "getInstance should return same instance");
+
+
 
 	}
 
